@@ -23,7 +23,7 @@ async function InsertVerifyUser(name, email, password) {
     await newUser.save();
     console.log(newUser, "signin -verifyUser saved in DB");
     // 1st create the activation ink and write content
-    const activationLink = `${process.env.dev_uri}${token}`;
+    const activationLink = `${process.env.production_uri}${token}`;
     console.log(activationLink);
 
     const content = `<h4> Hi there </h4>
